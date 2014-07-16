@@ -11,14 +11,14 @@ html, body {
 
 body {
   background-color: white;
-  font-family: Georgia, 'DejaVu Serif', serif;
+  font: 14pt 'Liberation Serif', Georgia, serif;
 }
 
 #site {
-  max-width: 55em;
+  max-width: 45em;
   text-align: left;
   line-height: 1.5em;
-  margin: 3em auto 2em auto;
+  margin: 2.5em auto 0 auto;
   padding: 0 1.5em;
 }
   #site .title {
@@ -26,9 +26,11 @@ body {
   }
   #site .links {
     text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #ddd;
   }
-    #site .links a {
-      text-decoration: none;
+    #site a {
       color: #a00;
     }
     #site .contact a:hover {
@@ -36,7 +38,6 @@ body {
     }
 
 .title, h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial, Clean, sans-serif;
   font-size: 105%;
 }
 
@@ -60,18 +61,20 @@ p {
 
 a {
   text-decoration: none;
-  color: #00b;
+  color: #a00;
 }
-  a:visited { color: #88b; }
-  a:hover   { color: #008; }
+  a:visited { color: #b11; }
+  a:hover   {
+    text-decoration: underline;
+  }
 
 ol {
   margin-left: 2.25em;
 }
 
 ul {
+  margin-top: 0.8em;
   margin-left: 1.8em;
-  list-style-type: circle;
 }
 
 .figure {
@@ -81,6 +84,17 @@ ul {
 
 hr {
   margin: 40px 0 10px 0;
+}
+
+.grid {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    width: 50%;
+  }
 }
 
 /* benchmarks table */
@@ -126,14 +140,15 @@ table.benchmarks {
 /* inline code and code blocks */
 
 code {
-  font: 80% Monaco, 'Courier New', Courier, monospace;
+  font: 80% Monaco, monospace;
 }
 
 pre {
   border: 1px solid #ddd;
-  margin: 1em 2em 1em 1.5em;
+  margin: 1em 0;
   padding: .75em 1.25em;
   line-height: 1em;
+  font-size: 80%;
 }
 
 .sidebar {
